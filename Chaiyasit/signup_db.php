@@ -2,7 +2,7 @@
 
     session_start();
     require_once 'config/db.php';
-
+#adwawdawd
     if (isset($_POST['signup'])) {
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
