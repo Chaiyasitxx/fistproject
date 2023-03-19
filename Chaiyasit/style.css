@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    
+    
+}
+  
+  a {
+    color: #000;
+  }
+  
+  /* header */
+  
+  .header {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  /*  border: 1px solid red;*/
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+    
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+   /* border: 1px solid red;*/
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #ffffff;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  ;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    
+
+}
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+    ;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+
+  .wallpaper-logo {
+    position: relative;
+    text-align: center;
+    background:linear-gradient(
+      rgba(255,255,255, 0.2),
+      rgba(255,255,255, 0.2)),
+    url(https://media.istockphoto.com/photos/closeup-portrait-of-funny-ginger-cat-wearing-sunglasses-isolated-on-picture-id1224578259?k=20&m=1224578259&s=612x612&w=0&h=eVub99bC0TRfTRnUHumU5eQZiun7mN5AcrNB65t1CdA=);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    filter: blur(0.4px);
+  
+  }
+.content {
+    position: absolute;
+    top: 0;
+    height: 65vh;
+    width: 100vw;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .text-wrapper {
+    background-color: rgba(230, 248, 248, 0.493) ;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .sceen {
+    height:7.5vh;
+    width: 100vw;
+   
+ }
+
+ .sceen1 {
+    height:10vh;
+    width: 100vw;
+    
+ }
+ .name {
+    display: block;
+    float:right;
+   background: url(https://media.istockphoto.com/photos/young-pink-hair-girl-listening-music-in-headphones-picture-id1300324580?b=1&k=20&m=1300324580&s=170667a&w=0&h=csNLv_RqHxnWMsuzIIEGqCS_Wz9_OmrGXcOSIiyxwj4=);
+    
+    font-size:1.3em;
+    padding: 18px 20px;
+    text-decoration: none;
+  /* border: 1px solid red;*/
+ }
+
+ .gallery {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 3fr));
+    grid-template-rows: auto;
+  }
+  
+  figure img {
+    width: 100%;
+    height:350px;
+    border: 2rem solid white;
+    box-shadow: 5px 5px 17px 1px #000000;
+  }
+  
+  figcaption {
+   position: relative;
+    bottom: 10%;
+    left: 35%;
+    font-family: "Pacifico";
+    padding: 0.5rem;
+  }
+  
+ 
+
